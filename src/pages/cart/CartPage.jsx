@@ -16,16 +16,15 @@ export default function CartPage() {
 
     const order = {
       createdBy: DUMMY_USER_ID,
-      orderItems: items.map(i => ({
+      items: items.map(i => ({
         productId: i.productId,
         productName: i.productName,
         quantity: i.quantity,
-        pricePerUnit: i.pricePerUnit,
-        totalPrice: i.pricePerUnit * i.quantity,
-      })),
-      totalPrice: total,
-      status: "CREATED",
+        pricePerUnit: i.pricePerUnit
+      }))
     };
+
+    console.log(order);
 
     try {
       setLoading(true);

@@ -10,7 +10,7 @@ export default function OrdersPage() {
   if (error) return <p>Error loading orders 😢</p>;
 
   return (
-    <div style={{ padding: 20 }}>
+    <div>
       <h2>Orders</h2>
       <ul>
         {orders.map(order => (
